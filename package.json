@@ -1,0 +1,33 @@
+{
+	"name": "cloudinary-cli",
+	"version": "1.0.0",
+	"description": "A command-line interface into cloudinary",
+	"main": "cloudinary.js",
+	"bin": {
+		"cloudinary": "cloudinary.js",
+		"cloudinary-upload": "cloudinary-upload.js"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/pcon/cloudinary-cli.git"
+	},
+	"keywords": [
+		"cloudinary",
+		"cli"
+	],
+	"author": "Patrick Connelly <patrick@deadlypenguin.com> (http://deadlypenguin.com)",
+	"license": "GPL-2.0",
+	"bugs": {
+		"url": "https://github.com/pcon/cloudinary-cli/issues"
+	},
+	"homepage": "https://github.com/pcon/cloudinary-cli#readme",
+	"dependencies": {
+		"cloudinary": "1.2.4",
+		"commander": "2.8.1",
+		"lodash": "3.10.1",
+		"q": "1.4.1"
+	}
+}
