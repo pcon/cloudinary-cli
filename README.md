@@ -33,10 +33,14 @@ To upload a single file simply run
 
 `cloudinary upload foo.png`
 
-or use the aliased version
-
-`cloudinary-upload foo.png`
-
 To upload multiple files, use a space seperated list
 
 `cloudinary upload image1.png image2.png image3.png`
+
+## Options
+You can use the following options when uploading
+
+```
+  --folder, -f      The folder
+  --usefilename     Use the system filename
+```

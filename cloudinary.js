@@ -1,4 +1,11 @@
 #!/usr/bin/env node
 
-var cli = require('./lib/cli.js');
-cli.run();
+var yargs = require('yargs');
+var utils = require('./lib/utils');
+
+yargs
+	.options(utils.GLOBAL_OPTIONS)
+	.commandDir('cmds')
+	.demandCommand()
+	.help()
+	.argv;
