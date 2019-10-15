@@ -1,11 +1,10 @@
 {
 	"name": "cloudinary-cli",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "A command-line interface into cloudinary",
 	"main": "cloudinary.js",
 	"bin": {
-		"cloudinary": "cloudinary.js",
-		"cloudinary-upload": "cloudinary-upload.js"
+		"cloudinary": "cloudinary.js"
 	},
 	"scripts": {
 		"lint-eslint": "./node_modules/.bin/eslint cloudinary*.js lib/*"
@@ -25,10 +24,12 @@
 	},
 	"homepage": "https://github.com/pcon/cloudinary-cli#readme",
 	"dependencies": {
+		"chalk": "^2.4.2",
 		"cloudinary": "1.15.0",
 		"commander": "3.0.2",
 		"lodash": "4.17.15",
-		"q": "1.5.1"
+		"q": "1.5.1",
+		"yargs": "^14.2.0"
 	},
 	"devDependencies": {
 		"eslint": "^6.5.1"
