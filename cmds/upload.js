@@ -20,6 +20,11 @@ var OPTIONS = {
 		type: 'string',
 		alias: 'f'
 	},
+	unique: {
+		describe: 'When true ensures the filename is unique by appending a hash if `usefilename` is true, otherwise uses a hash as the file name. Defaults to true.',
+		type: 'boolean',
+		alias: 'u'
+	},
 	usefilename: {
 		describe: 'Use the system filename',
 		type: 'boolean'
@@ -29,6 +34,7 @@ var OPTIONS = {
 /** Maps the command line options to the cloudinary upload options */
 var OPTION_MAP = {
 	folder: 'folder',
+	unique: 'unique_filename',
 	usefilename: 'use_filename'
 };
 
@@ -76,7 +82,7 @@ function handler(argv) {
 			lodash.each(lodash.keys(OPTIONS), function (option) {
 				var value = lodash.get(argv, option);
 				var config_key = lodash.get(OPTION_MAP, option);
-				if (value) {
+				if (value !== undefined) {
 					lodash.set(config.options, config_key, value);
 				}
 			});
